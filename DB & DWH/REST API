@@ -1,10 +1,31 @@
+GET /employees: Retrieves all employees.
+
+GET /employees/{id}: Retrieves an employee with a specific employee ID.
+
+POST /employees: Creates a new employee and returns the employee ID as a URI.
+
+PUT /employees/{id}: Updates an employee with a specific employee ID.
+
+DELETE /employees/{id}: Deletes an employee with a specific employee ID.
+
+===================================================================================================================================
+
 URL : https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/
 
 Methods Allowed : GET, POST, PUT, DELETE
-
+-----------------------------------------------------------------------------------------------------------------------------------
 //GET
 https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/
 
+>Above will return data for temp2 table in JSON format
+
+-----------------------------------------------------------------------------------------------------------------------------------
+//GET
+https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/5
+
+>Above will fetch the row from temp2 table with column (PRIMARY KEY) value = 5
+
+-----------------------------------------------------------------------------------------------------------------------------------
 //POST
 https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/
 
@@ -14,6 +35,8 @@ https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/
 	"name": "abc"
 }
 
+> above will create a row in temp2 table for above payload. Here 'id' is primary key column. 
+-----------------------------------------------------------------------------------------------------------------------------------
 //PUT
 https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/4
 {
@@ -24,6 +47,7 @@ https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/
 
 //Above will update the row with new 'age', 'name' value. It will ignore 'id' (primary key) attribute/column data.
 
+-----------------------------------------------------------------------------------------------------------------------------------
 //PUT
 https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/4
 
@@ -34,12 +58,14 @@ https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/
 //Above will update the row with new 'name' value i.e. 'XYZ' and age (or other column/s value will become '' (empty) since we are not
 passing any attribute & value for them. So it will update rest of the column for that row with empty string value.
 
+-----------------------------------------------------------------------------------------------------------------------------------
 NOTE: In PUT method 'id' (primary key) attribute/column data is ignored, no matter what is passed.
 NOTE: For using PUT method URL should have 'id' (any primary key value) at the last so that It will know which row has to be updated.
 NOTE: For Using PUT method, a table should have a column with PRIMARY KEY. So that in URL it can be passed.
-
+-----------------------------------------------------------------------------------------------------------------------------------
 
 //DELETE
 https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/3
 
 //above will delete the row with primary key column value = 3
+-----------------------------------------------------------------------------------------------------------------------------------
