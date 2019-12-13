@@ -1,14 +1,18 @@
 GET /employees: Retrieves all employees.
 
-GET /employees/{id}: Retrieves an employee with a specific employee ID.
+GET /employees/{id}: Retrieves an employee with a specific employee ID.			//PRIMARY KEY
 
 POST /employees: Creates a new employee and returns the employee ID as a URI.
 
-PUT /employees/{id}: Updates an employee with a specific employee ID.
+PUT /employees/{id}: Updates an employee with a specific employee ID.			//PRIMARY KEY
 
-DELETE /employees/{id}: Deletes an employee with a specific employee ID.
+DELETE /employees/{id}: Deletes an employee with a specific employee ID.		//PRIMARY KEY
 
 ===================================================================================================================================
+NOTE: In PUT method 'id' (primary key) attribute/column data is ignored, no matter what is passed.
+NOTE: For using PUT method URL should have 'id' (any primary key value) at the last so that It will know which row has to be updated.
+NOTE: For Using PUT method, a table should have a column with PRIMARY KEY. So that in URL it can be passed.
+-----------------------------------------------------------------------------------------------------------------------------------
 
 URL : https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/
 
@@ -59,11 +63,6 @@ https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/
 passing any attribute & value for them. So it will update rest of the column for that row with empty string value.
 
 -----------------------------------------------------------------------------------------------------------------------------------
-NOTE: In PUT method 'id' (primary key) attribute/column data is ignored, no matter what is passed.
-NOTE: For using PUT method URL should have 'id' (any primary key value) at the last so that It will know which row has to be updated.
-NOTE: For Using PUT method, a table should have a column with PRIMARY KEY. So that in URL it can be passed.
------------------------------------------------------------------------------------------------------------------------------------
-
 //DELETE
 https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/amar/temp2/3
 
