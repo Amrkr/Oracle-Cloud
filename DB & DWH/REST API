@@ -49,7 +49,8 @@ https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/
 	"name": "abcd"
 }
 
-//Above will update the row (having PRIMARY KEY column value = 4) with new 'age', 'name' value. It will ignore 'id' (primary key) attribute/column data.
+//Above will update the row (having PRIMARY KEY column value = 4) with new 'age', 'name' value. It will ignore 'id' (primary key) 
+attribute/column data.
 
 -----------------------------------------------------------------------------------------------------------------------------------
 //PUT
@@ -59,8 +60,9 @@ https://kijtwqdyrqzc6bh-dboraclecloud.adb.us-ashburn-1.oraclecloudapps.com/ords/
 	"name": "XYZ"
 }
 
-//Above will update the row with new 'name' value i.e. 'XYZ' and age (or other column/s value will become '' (empty) since we are not
-passing any attribute & value for them. So it will update rest of the column for that row with empty string value.
+//Above will update the row (having PRIMARY KEY column value = 4) with new 'name' value i.e. 'XYZ' and age (or other column/s value 
+will become '' (empty) since we are not passing any attribute & value for them. So it will update rest of the column for that row 
+with empty string value.
 
 -----------------------------------------------------------------------------------------------------------------------------------
 //DELETE
